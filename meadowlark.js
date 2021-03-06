@@ -4,13 +4,7 @@ const expressHandlebars = require('express-handlebars');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-const wordOfDay = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need spring.",
-    "Do not fear what you don`t know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple."
-];
+const word = require('./lib/word');
 
 // diretório para estilos, imagens, javascript...
 app.use(express.static(__dirname + '/public'));
@@ -27,8 +21,7 @@ app.get('/', (request, response) => response.render('home'));
 
 //página about
 app.get('/about', (request, response) => {
-    const randomWord = wordOfDay[Math.floor(Math.random() * wordOfDay.length)];
-    response.render('about', { word: randomWord });
+    response.render('about', { word: word.getWordOfDay });
 });
 
 //página 404 personalizada
