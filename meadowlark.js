@@ -5,6 +5,9 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// diretório para estilos, imagens, javascript...
+app.use(express.static(__dirname + '/public'));
+
 //cria um view engine Handlebars
 //e configura o Express para usá-lo como padrão
 app.engine('handlebars', expressHandlebars({
