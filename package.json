@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eguilhermeleite/Site-Meadowlark/issues"
   },
-  "homepage": "https://github.com/eguilhermeleite/Site-Meadowlark#readme"
+  "homepage": "https://github.com/eguilhermeleite/Site-Meadowlark#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
