@@ -1,3 +1,7 @@
 <div class="container">
     <h1 class="display-4">About Meadowlark</h1>
+    {{#if word}}
+    <p class="lead">Your word of day :</p>
+    <blockquote class="h6 font-italic text-primary">{{word}}</blockquote>
+    {{/if}}
 </div>
