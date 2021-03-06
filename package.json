@@ -1,0 +1,19 @@
+{
+  "name": "sitedolivro",
+  "version": "1.0.0",
+  "description": "Site do livro: Programação Web com Node e Express (Ethan Brown)",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eguilhermeleite/Site-Meadowlark.git"
+  },
+  "author": "Edvaldo Leite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eguilhermeleite/Site-Meadowlark/issues"
+  },
+  "homepage": "https://github.com/eguilhermeleite/Site-Meadowlark#readme"
+}
