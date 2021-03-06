@@ -13,29 +13,22 @@ app.engine('handlebars', expressHandlebars({
 app.set('view engine', 'handlebars');
 
 //página principal
-app.get('/', (request, response) => {
-    response.type('html');
-    response.send("MeadowLark Travel");
-});
+app.get('/', (request, response) => response.render('home'));
 
 //página about
-app.get('/about', (request, response) => {
-    response.type('html');
-    response.send("About Meadowlark");
-})
+app.get('/about', (request, response) => response.render('about'));
 
 //página 404 personalizada
 app.use((request, response) => {
-    response.type('text/plain');
     response.status(404);
-    response.end('404 - Not Found');
+    response.render('404');
 });
 
 // página 500 personalizada
-app.use((request, response) => {
-    response.type('text/plain');
+app.use((err, request, response, next) => {
+    console.error(err.message);
     response.status(500);
-    response.end('500 - Internal Error');
+    response.render('500');
 });
 
 app.listen(port, () => console.log(`Express Funcionando na porta ${port}. Pressione Ctrl + c para finalizar`));
